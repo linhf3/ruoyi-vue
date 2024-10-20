@@ -178,6 +178,7 @@ Router.prototype.replace = function push(location) {
 
 export default new Router({
   mode: 'history', // 去掉url中的#
+  base: '/apps/', // -----------设置这里 和 前端 打包后的包名一直，不一致 等打包成功修改包名
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes
 })
